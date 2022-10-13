@@ -2,17 +2,17 @@ import random
 import numpy as np
 
 
-def dividir_equipes():
-    times = int(input('Digite a quantidade de times: '))
-    path = 'palavras.txt'
+def divide_teams():
+    teams = int(input('input the number of teams: '))
+    path = 'words.txt'
 
     with open(path, 'r') as file:
-        jogadores = file.readlines()
+        players = file.readlines()
 
-    random.shuffle(jogadores)
-    splits = np.array_split(jogadores, times)
+    random.shuffle(players)
+    splits = np.array_split(players, teams)
 
     print(splits)
 
 
-dividir_equipes()
+divide_teams()
